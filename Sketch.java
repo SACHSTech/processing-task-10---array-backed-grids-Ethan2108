@@ -10,7 +10,7 @@ public class Sketch extends PApplet {
   
   int width = (cellWidth * rowCount) + (cellMargin * (rowCount + 1));
   int height = (cellHeight * columnCount) + (cellMargin * (columnCount + 1));
-
+  int[][] intGrid = new int[rowCount][columnCount];
   int mouseX = 300;
   int mouseY = 300;
   int selectedCount;
