@@ -5,22 +5,18 @@ public class Sketch extends PApplet {
   int cellWidth = 20;
   int cellHeight = 20;
   int cellMargin = 5;
-
   int rowCount = 10;
   int columnCount = 10;
-
   int rowCheck = -1;
   int columnCheck = -1;
-
   int width = (cellWidth * rowCount) + (cellMargin * (rowCount + 1));
   int height = (cellHeight * columnCount) + (cellMargin * (columnCount + 1));
-
   int[][] intGrid = new int[rowCount][columnCount];
-
   int mouseSquareX = 300;
   int mouseSquareY = 300;
-
   int colouredSquares = 0;
+  boolean gridPressed = false;
+  boolean gridPrint = false;
 	
   /**
    * Called once at the beginning of execution, put your size all in this method
