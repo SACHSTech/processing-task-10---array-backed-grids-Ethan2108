@@ -7,14 +7,17 @@ public class Sketch extends PApplet {
   int cellMargin = 5;
   int rowCount = 10;
   int columnCount = 10;
-  int rowCheck = -1;
-  int columnCheck = -1;
+  
   int width = (cellWidth * rowCount) + (cellMargin * (rowCount + 1));
   int height = (cellHeight * columnCount) + (cellMargin * (columnCount + 1));
-  int[][] intGrid = new int[rowCount][columnCount];
-  int mouseSquareX = 300;
-  int mouseSquareY = 300;
-  int colouredSquares = 0;
+
+  int mouseX = 300;
+  int mouseY = 300;
+  int selectedCount;
+  int selectedRowCount;
+  int selectedColumnCount;
+  int grid;
+;
   boolean gridPressed = false;
   boolean gridPrint = false;
 	
@@ -23,7 +26,7 @@ public class Sketch extends PApplet {
    */
   public void settings() {
     // put your size call here
-    size(500, 600);
+    size(width, height);
   }
 
   /** 
