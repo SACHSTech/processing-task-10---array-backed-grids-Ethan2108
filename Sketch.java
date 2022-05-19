@@ -2,6 +2,7 @@ import processing.core.PApplet;
 
 public class Sketch extends PApplet {
 
+  // cell ints
   int cellWidth = 50;
   int cellHeight = 50;
   int cellMargin = 5;
@@ -10,6 +11,8 @@ public class Sketch extends PApplet {
   
   int width = (cellWidth * rowCount) + (cellMargin * (rowCount + 1));
   int height = (cellHeight * columnCount) + (cellMargin * (columnCount + 1));
+
+  // array setup
   int[][] intGrid = new int[rowCount][columnCount];
   int mouseXonGrid;
   int mouseYonGrid;
@@ -43,6 +46,7 @@ public class Sketch extends PApplet {
    */
   public void draw() {
 
+    // methods
     drawGrid();
     gridData();
   }
@@ -114,13 +118,13 @@ public class Sketch extends PApplet {
             
           }
 
-          // text outputs
+          // text to be displayed
           println( "Total of " + selectedCount + " cells are selected.");
           
           gridPressed = false;
         }
 
-        // colour change
+        // colour change to green
         if (intGrid[ROWS][COLUMNS] == 1){
 
           fill(0, 255, 0);
