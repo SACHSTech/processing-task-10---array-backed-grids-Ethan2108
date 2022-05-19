@@ -3,8 +3,8 @@ import processing.core.PApplet;
 public class Sketch extends PApplet {
 
   // cell ints
-  int cellWidth = 50;
-  int cellHeight = 50;
+  int cellWidth = 35;
+  int cellHeight = 35;
   int cellMargin = 5;
   int rowCount = 10;
   int columnCount = 10;
